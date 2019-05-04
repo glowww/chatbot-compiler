@@ -1,0 +1,88 @@
+/*
+ * A n t l r  S e t s / E r r o r  F i l e  H e a d e r
+ *
+ * Generated from: program.g
+ *
+ * Terence Parr, Russell Quong, Will Cohen, and Hank Dietz: 1989-2001
+ * Parr Research Corporation
+ * with Purdue University Electrical Engineering
+ * With AHPCRC, University of Minnesota
+ * ANTLR Version 1.33MR33
+ */
+
+#define ANTLR_VERSION	13333
+#include "pcctscfg.h"
+#include "pccts_stdio.h"
+
+#include <string>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+// struct to store information about tokens
+typedef struct {
+  string kind;
+  string text;
+} Attrib;
+
+// function to fill token information (predeclaration)
+void zzcr_attr(Attrib *attr, int type, char *text);
+
+// fields for AST nodes
+#define AST_FIELDS string kind; string text;
+#include "ast.h"
+
+// macro to create a new AST node (and function predeclaration)
+#define zzcr_ast(as,attr,ttype,textt) as=createASTnode(attr,ttype,textt)
+AST* createASTnode(Attrib* attr, int ttype, char *textt);
+#define zzSET_SIZE 4
+#include "antlr.h"
+#include "ast.h"
+#include "tokens.h"
+#include "dlgdef.h"
+#include "err.h"
+
+ANTLRChar *zztokens[23]={
+	/* 00 */	"Invalid",
+	/* 01 */	"@",
+	/* 02 */	"CONVERSATION",
+	/* 03 */	"QUESTION",
+	/* 04 */	"ANSWERS",
+	/* 05 */	"THEN",
+	/* 06 */	"OR",
+	/* 07 */	"INTERACTION",
+	/* 08 */	"CHATBOT",
+	/* 09 */	"END",
+	/* 10 */	"ID",
+	/* 11 */	"NUM",
+	/* 12 */	"QUESTIONMARK",
+	/* 13 */	"SEMICOLON",
+	/* 14 */	"HASHTAG",
+	/* 15 */	"TWODOTS",
+	/* 16 */	"ARROW",
+	/* 17 */	"COMMA",
+	/* 18 */	"PC",
+	/* 19 */	"PO",
+	/* 20 */	"CC",
+	/* 21 */	"CO",
+	/* 22 */	"SPACE"
+};
+SetWordType zzerr1[4] = {0x1c,0x0,0x0,0x0};
+SetWordType zzerr2[4] = {0x80,0xd,0x10,0x0};
+SetWordType setwd1[23] = {0x0,0x1,0x0,0x0,0x0,0x0,0x0,
+	0xfe,0xfe,0x0,0xfc,0x90,0x0,0x0,0x0,
+	0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0};
+SetWordType zzerr3[4] = {0x0,0x0,0x26,0x0};
+SetWordType setwd2[23] = {0x0,0x0,0x0,0x0,0x0,0x40,0x40,
+	0xf1,0x71,0x0,0x71,0x0,0x8,0x8,0x40,
+	0x0,0x40,0x0,0x46,0x48,0x0,0x6,0x0};
+SetWordType zzerr4[4] = {0xc0,0x41,0xc,0x0};
+SetWordType zzerr5[4] = {0xc0,0x41,0xc,0x0};
+SetWordType zzerr6[4] = {0x0,0x40,0x4,0x0};
+SetWordType zzerr7[4] = {0xe0,0x41,0xc,0x0};
+SetWordType setwd3[23] = {0x0,0x0,0x0,0x0,0x0,0x0,0x88,
+	0xfd,0xfd,0x0,0x0,0x0,0x0,0x0,0xfa,
+	0x0,0x0,0x0,0xfa,0xf8,0x0,0x0,0x0};
+SetWordType setwd4[23] = {0x0,0x2,0x0,0x0,0x0,0x0,0x1,
+	0x1,0x1,0xc,0xc,0x0,0x0,0x0,0x1,
+	0x0,0x0,0x0,0x1,0x1,0x0,0x0,0x0};
